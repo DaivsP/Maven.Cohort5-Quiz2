@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListUtility {
-    public Boolean add(int i) {
-        return contains(i);
+    List<Integer> answer = new ArrayList<>();
+
+    public Boolean add(Integer i) {
+        return answer.add(i);
     }
 
     public Integer size() {
@@ -26,11 +28,7 @@ public class ListUtility {
     }
 
     public Boolean contains(Integer valueToAdd) {
-        List<Integer> list = new ArrayList<>();
-        list.add(valueToAdd);
-        if (list.isEmpty()){
-            return false;
-        }
-        return true;
+        this.answer = answer;
+        return answer.contains(valueToAdd);
     }
 }
