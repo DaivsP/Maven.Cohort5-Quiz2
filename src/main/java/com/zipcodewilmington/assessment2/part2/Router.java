@@ -1,6 +1,7 @@
 package com.zipcodewilmington.assessment2.part2;
 
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 public class Router {
@@ -26,6 +27,13 @@ public class Router {
     }
 
     public String  toString(){
-        return map.toString();
+        StringBuilder sb = new StringBuilder();
+        Set<String> pathSet = map.keySet();
+        for (String paths: pathSet) {
+            sb.append(paths);
+            sb.append(" -> ");
+            sb.append(map.get(paths) + "\n");
+            }
+        return sb.toString();
     }
 }

@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment2.part2;
 
+import com.j256.ormlite.stmt.query.In;
+
 import java.util.*;
 
 public class ArrayUtility {
@@ -42,9 +44,9 @@ public class ArrayUtility {
     }
 
     public Integer mostCommon(Integer[] array) {
-        int count = 1, tempCount;
-        int popular = array[0];
-        int temp = 0;
+        Integer count = 1, tempCount;
+        Integer popular = array[0];
+        Integer temp = 0;
         for (int i = 0; i < (array.length - 1); i++)
         {
             temp = array[i];
