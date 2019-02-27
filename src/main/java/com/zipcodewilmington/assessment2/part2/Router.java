@@ -14,10 +14,11 @@ public class Router {
     }
 
     public String getController(String path) {
-        return null;
+        return map.get(path);
     }
 
     public void update(String path, String studentController) {
+        map.replace(path, studentController);
     }
 
     public void remove(String path) {
@@ -25,6 +26,6 @@ public class Router {
     }
 
     public String  toString(){
-        return null;
+        return map.toString();
     }
 }
